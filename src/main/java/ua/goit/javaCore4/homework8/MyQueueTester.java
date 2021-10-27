@@ -1,5 +1,7 @@
 package ua.goit.javaCore4.homework8;
 
+import java.util.Queue;
+
 public class MyQueueTester {
     public static void main(String[] args) {
         MyQueue myQueue = new MyQueue();
@@ -15,7 +17,7 @@ public class MyQueueTester {
         System.out.println(myQueue.get(1));
         System.out.println(myQueue.get(2));
         System.out.println(myQueue.get(3));
-        System.out.println(myQueue.get(4));
+        //System.out.println(myQueue.get(4));
 
         System.out.println(myQueue.peek());
 
