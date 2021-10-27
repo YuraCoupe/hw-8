@@ -60,8 +60,6 @@ public class MyLinkedList<V> {
                 if (node.getIndex() == 0) {
                     node.getNext().setPrevious(null);
                     firstNode = node.getNext();
-                    //System.out.println(firstNode.getValue().toString());
-                    //firstNode.setPrevious(null);
                 } else if (node.getIndex() == size - 1) {
                     node.getPrevious().setNext(null);
                     lastNode = node.getPrevious();
@@ -97,13 +95,18 @@ public class MyLinkedList<V> {
 
     public V get(int index) {
         Node node = firstNode;
-        for (int i = 0; i < size; i++) {
-            if (node.getIndex() == index) {
-                return (V) node.getValue();
-            };
-            node = node.getNext();
+        V result = null;
+            for (int i = 0; i < size; i++) {
+                if (node.getIndex() == index) {
+                    return (V) node.getValue();
+                }
+                node = node.getNext();
+            }
+            System.out.printf("There is no %d index at the list\n", index);
+        if (result == null) {
+            throw new IndexOutOfBoundsException();
         }
-        return null;
+        return result;
     }
 
     public String toString() {

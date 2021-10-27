@@ -1,6 +1,8 @@
 package ua.goit.javaCore4.homework8;
 
 
+import java.util.LinkedList;
+
 public class MyLinkedListTester {
     public static void main(String[] args) {
         MyLinkedList myLinkedList = new MyLinkedList();
