@@ -1,14 +1,12 @@
 package ua.goit.javaCore4.homework8;
 
-import java.util.Queue;
-
 public class MyQueueTester {
     public static void main(String[] args) {
         MyQueue myQueue = new MyQueue();
-        myQueue.add("Ukraine");
-        myQueue.add("Germany");
-        myQueue.add("France");
-        myQueue.add("USA");
+        myQueue.push("Ukraine");
+        myQueue.push("Germany");
+        myQueue.push("France");
+        myQueue.push("USA");
         System.out.println(myQueue.size());
 
         System.out.println(myQueue.toString());
@@ -36,7 +34,7 @@ public class MyQueueTester {
 
         System.out.println(myQueue.toString());
 
-        myQueue.add("USA");
+        myQueue.push("USA");
         System.out.println(myQueue.size());
 
         System.out.println(myQueue.toString());

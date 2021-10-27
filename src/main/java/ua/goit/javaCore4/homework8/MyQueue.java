@@ -29,7 +29,7 @@ public class MyQueue<V> {
         return lastNode;
     }
 
-    public void add(V value) {
+    public void push(V value) {
         if (size == 0) {
             Node newNode = new Node(null, null, value);
             firstNode = newNode;
