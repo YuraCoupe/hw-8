@@ -7,7 +7,10 @@ public class MyHashMapTester {
         myHashMap.put(40, "BMW");
         myHashMap.put(30, "Audi");
         myHashMap.put(20, "Porsche");
+        myHashMap.put(30, "Lada");
+        myHashMap.put(null, "Lada");
         myHashMap.put(10, "Maybach");
+        myHashMap.put(null, "Lexus");
         System.out.println(myHashMap);
 
         System.out.println(myHashMap.get(50));

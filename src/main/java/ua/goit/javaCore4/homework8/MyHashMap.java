@@ -1,6 +1,8 @@
 package ua.goit.javaCore4.homework8;
 
-public class MyHashMap <K, V> {
+import java.util.Objects;
+
+public class MyHashMap<K, V> {
     private int size = 0;
     private MapNode firstNode = new MapNode(null, null, null, null);
     private MapNode lastNode = new MapNode(null, null, null, null);
@@ -34,11 +36,21 @@ public class MyHashMap <K, V> {
             MapNode newNode = new MapNode(null, null, key, value);
             firstNode = newNode;
             lastNode = firstNode;
-        } else {
-            MapNode newNode = new MapNode(lastNode, null, key, value);
-            lastNode.setNext(newNode);
-            lastNode = newNode;
+            size++;
+            return;
         }
+        MapNode node = firstNode;
+        for (int i = 0; i < size; i++) {
+            if (Objects.equals(node.getKey(), key)) {
+                node.setKey(key);
+                node.setValue(value);
+                return;
+            }
+            node = node.getNext();
+        }
+        MapNode newNode = new MapNode(lastNode, null, key, value);
+        lastNode.setNext(newNode);
+        lastNode = newNode;
         size++;
     }
 
@@ -49,7 +61,7 @@ public class MyHashMap <K, V> {
         MapNode node = firstNode;
         boolean flag = false;
         for (int i = 0; i < size; i++) {
-            if (node.getKey().equals(key)) {
+            if (Objects.equals(node.getKey(), key)) {
                 flag = true;
                 if (i == 0) {
                     node.getNext().setPrevious(null);
@@ -87,9 +99,10 @@ public class MyHashMap <K, V> {
     public V get(K key) {
         MapNode node = firstNode;
         for (int i = 0; i < size; i++) {
-            if (node.getKey().equals(key)) {
+            if (Objects.equals(node.getKey(), key)) {
                 return (V) node.getValue();
-            };
+            }
+            ;
             node = node.getNext();
         }
         return null;
