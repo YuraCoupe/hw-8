@@ -3,13 +3,9 @@ package ua.goit.javaCore4.homework8;
 import java.util.Arrays;
 
 public class MyArrayList {
-    private int defaultSize = 10;
+    private final int defaultSize = 10;
     private Object[] myArray = new Object[defaultSize];
     private int size = defaultSize;
-
-    public int getSize() {
-        return size;
-    }
 
     private int cursor = 0;
 
