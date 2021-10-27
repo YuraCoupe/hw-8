@@ -9,28 +9,28 @@ public class MyStackTester {
         myStack.push("USA");
         System.out.println(myStack.size());
 
-        System.out.println(myStack.toString());
+        System.out.println(myStack);
 
         System.out.println(myStack.peek());
 
         myStack.remove(3);
         System.out.println(myStack.size());
 
-        System.out.println(myStack.toString());
+        System.out.println(myStack);
 
         String pooledValue = (String) myStack.poll();
         System.out.println(pooledValue);
 
-        System.out.println(myStack.toString());
+        System.out.println(myStack);
 
         myStack.clear();
         System.out.println(myStack.size());
 
-        System.out.println(myStack.toString());
+        System.out.println(myStack);
 
         myStack.push("USA");
         System.out.println(myStack.size());
 
-        System.out.println(myStack.toString());
+        System.out.println(myStack);
     }
 }

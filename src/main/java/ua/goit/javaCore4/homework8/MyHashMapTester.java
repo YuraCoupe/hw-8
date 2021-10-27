@@ -8,7 +8,7 @@ public class MyHashMapTester {
         myHashMap.put(30, "Audi");
         myHashMap.put(20, "Porsche");
         myHashMap.put(10, "Maybach");
-        System.out.println(myHashMap.toString());
+        System.out.println(myHashMap);
 
         System.out.println(myHashMap.get(50));
         System.out.println(myHashMap.get(30));
@@ -18,18 +18,18 @@ public class MyHashMapTester {
 
         myHashMap.remove(60);
 
-        System.out.println(myHashMap.toString());
+        System.out.println(myHashMap);
 
         myHashMap.remove(20);
 
-        System.out.println(myHashMap.toString());
+        System.out.println(myHashMap);
 
         myHashMap.clear();
 
-        System.out.println(myHashMap.toString());
+        System.out.println(myHashMap);
 
         myHashMap.put(10, "Maybach");
 
-        System.out.println(myHashMap.toString());
+        System.out.println(myHashMap);
     }
 }

@@ -12,7 +12,7 @@ public class MyLinkedListTester {
         myLinkedList.add("USA");
         System.out.println(myLinkedList.size());
 
-        System.out.println(myLinkedList.toString());
+        System.out.println(myLinkedList);
 
         System.out.println(myLinkedList.get(0));
         System.out.println(myLinkedList.get(1));
@@ -25,16 +25,16 @@ public class MyLinkedListTester {
         System.out.println(myLinkedList.getLastNode().getValue());
 
 
-        System.out.println(myLinkedList.toString());
+        System.out.println(myLinkedList);
 
         myLinkedList.clear();
         System.out.println(myLinkedList.size());
 
-        System.out.println(myLinkedList.toString());
+        System.out.println(myLinkedList);
 
         myLinkedList.add("USA");
         System.out.println(myLinkedList.size());
 
-        System.out.println(myLinkedList.toString());
+        System.out.println(myLinkedList);
     }
 }
