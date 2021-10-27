@@ -3,33 +3,52 @@ package ua.goit.javaCore4.homework8;
 import java.util.Arrays;
 
 public class MyArrayList {
-    private int defaultSize = 0;
+    private int defaultSize = 10;
     private Object[] myArray = new Object[defaultSize];
     private int size = defaultSize;
 
+    public int getSize() {
+        return size;
+    }
+
+    private int cursor = 0;
+
     public void add(Object value) {
-        size++;
-        myArray = Arrays.copyOf(myArray, size);
-        myArray[myArray.length - 1] = value;
+        if (cursor == size) {
+            size = size + 1;
+            myArray = Arrays.copyOf(myArray, size);
+        }
+        myArray[cursor] = value;
+        cursor++;
     }
 
     public boolean remove(int index) {
-        if (index > myArray.length - 1) {
+        if (index >= cursor | size == 0) {
             return false;
         }
-        for (int i = index + 1; i < myArray.length; i++) {
+        for (int i = index + 1; i < cursor; i++) {
             myArray[i - 1] = myArray[i];
         }
-        myArray = Arrays.copyOf(myArray, myArray.length - 1);
+        myArray[cursor -1] = null;
+        size--;
+        cursor--;
+        if (size > defaultSize) {
+            myArray = Arrays.copyOf(myArray, size);
+        }
         return true;
     }
 
     public void clear() {
-        myArray = Arrays.copyOf(myArray, 0);
+        myArray = Arrays.copyOf(myArray, defaultSize);
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = null;
+        }
+        size = defaultSize;
+        cursor = 0;
     }
 
     public int size() {
-        return myArray.length;
+        return cursor;
     }
 
     public Object get(int index) {

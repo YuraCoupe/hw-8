@@ -1,6 +1,8 @@
 package ua.goit.javaCore4.homework8;
 
 
+import java.util.ArrayList;
+
 public class MyArrayListTester {
     public static void main(String[] args) {
         MyArrayList myStringArrayList = new MyArrayList();
@@ -8,7 +10,14 @@ public class MyArrayListTester {
         myStringArrayList.add("Ukraine");
         myStringArrayList.add("Germany");
         myStringArrayList.add("USA");
-        myStringArrayList.add("France");
+        myStringArrayList.add("Belgium");
+        myStringArrayList.add("Netherlands");
+        myStringArrayList.add("Italy");
+        myStringArrayList.add("Spain");
+        myStringArrayList.add("Portugal");
+        myStringArrayList.add("Poland");
+        myStringArrayList.add("Greece");
+        System.out.println("Size is " + myStringArrayList.size());
 
         System.out.println((myStringArrayList.print()));
 
@@ -21,10 +30,17 @@ public class MyArrayListTester {
         myStringArrayList.remove(2);
         System.out.println((myStringArrayList.print()));
 
-        System.out.println(myStringArrayList.size());
+        myStringArrayList.remove(6);
+        System.out.println((myStringArrayList.print()));
+
+        System.out.println("Size is " + myStringArrayList.size());
         myStringArrayList.clear();
         System.out.println((myStringArrayList.print()));
-        System.out.println(myStringArrayList.size());
+        System.out.println("Size is " + myStringArrayList.size());
+
+        myStringArrayList.add("Ukraine");
+        System.out.println((myStringArrayList.print()));
+        System.out.println("Size is " + myStringArrayList.size());
 
         MyArrayList myIntArrayList = new MyArrayList();
         myIntArrayList.add(100);
@@ -41,11 +57,9 @@ public class MyArrayListTester {
         myIntArrayList.remove(0);
         System.out.println((myIntArrayList.print()));
 
-        System.out.println(myIntArrayList.size());
+        System.out.println("Size is " + myIntArrayList.size());
         myIntArrayList.clear();
         System.out.println((myIntArrayList.print()));
-        System.out.println(myIntArrayList.size());
-
-
+        System.out.println("Size is " + myIntArrayList.size());
     }
 }
